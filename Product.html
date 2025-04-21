@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equipment Catalog - Shamba Direct</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="product.css">
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#57B5E7',
+secondary: '#8DD3C7'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shamba Direct Navbar</title>
+  <style>
+    /* Container for the navbar section */
+    .navbar-section {
+      background-color: #ffffff;
+      padding: 20px 40px;
+    }
+
+    /* Main navbar styling */
+    .navbar {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Logo styling */
+    .navbar .logo img {
+      height: 40px;
+    }
+
+    /* Navigation links list */
+    .navbar .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Individual link styling */
+    .navbar .nav-links a {
+      text-decoration: none;
+      color: #003a26;
+      font-weight: 500;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    /* Active or hovered link */
+    .navbar .nav-links a.active,
+    .navbar .nav-links a:hover {
+      color: #e8e41d;
+    }
+
+    /* Actions on the right: language toggle, login, register */
+    .navbar .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* Language toggle background */
+    .lang-toggle {
+      display: flex;
+      background-color: #F2F4F7;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    /* Language button styling */
+    .lang-toggle .lang {
+      border: none;
+      background: none;
+      padding: 8px 12px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    /* Highlighted language */
+    .lang-toggle .lang.active {
+      background-color: #FFFFFF;
+      font-weight: 600;
+    }
+
+    /* Login link */
+    .navbar .login {
+      text-decoration: none;
+      color: #333333;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .navbar .login:hover {
+      color: #00753c;
+    }
+
+    /* Register button */
+    .navbar .register {
+      text-decoration: none;
+      background-color: #cbfd4d;
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .navbar .register:hover {
+      background-color: #088414;
+    }
+  </style>
+</head>
+<body>
+  <section class="navbar-section">
+    <nav class="navbar">
+      <!-- Logo -->
+      <a href="#" class="logo">
+        <img src="Image/SHAMBA-DIRECT-LOGO-OG-removebg-preview.png" alt="Shamba Direct">
+      </a>
+
+      <!-- Navigation links -->
+      <ul class="nav-links">
+        <li><a href="#" class="active">Trackors</a></li>
+        <li><a href="#">Harvestor</a></li>
+        <li><a href="#">irrigation</a></li>
+        <li><a href="#">Planting Equipment</a></li>
+      </ul>
+
+      <!-- Language toggle, login, register -->
+      <div class="nav-actions">
+        <div class="lang-toggle">
+          <button class="lang active">EN</button>
+          <button class="lang">SW</button>
+        </div>
+        <a href="login.html" class="login">Login</a>
+        <a href="registration.html" class="register">Register</a>
+      </div>
+    </nav>
+  </section>
+
+
+<main class="pt-[72px]">
+<div class="container mx-auto px-6 py-6">
+<div class="flex items-center gap-4 mb-6">
+<a href="home.html" data-readdy="true" class="text-gray-500 hover:text-primary flex items-center gap-1">
+<i class="ri-home-line"></i>
+<span>Home</span>
+</a>
+<i class="ri-arrow-right-s-line text-gray-400"></i>
+<span class="text-gray-700">Equipment</span>
+</div>
+
+<div class="bg-white rounded-lg shadow-sm p-6 mb-8">
+<div class="flex flex-col md:flex-row items-stretch gap-4">
+<div class="flex-grow relative">
+<input type="text" placeholder="Search for equipment..." class="w-full pl-12 pr-4 py-3 border-none bg-gray-50 rounded focus:ring-2 focus:ring-primary/30 focus:outline-none text-sm">
+<div class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-400">
+<i class="ri-search-line"></i>
+</div>
+</div>
+<button class="px-6 py-3 bg-primary text-white !rounded-button whitespace-nowrap hover:bg-primary/90">
+Search
+</button>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+<div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+<label class="custom-switch relative inline-block">
+<input type="checkbox" checked>
+<span class="slider"></span>
+</label>
+<div>
+<p class="text-sm font-medium text-gray-700">New Equipment</p>
+<p class="text-xs text-gray-500">Factory fresh items</p>
+</div>
+</div>
+<div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+<label class="custom-switch relative inline-block">
+<input type="checkbox">
+<span class="slider"></span>
+</label>
+<div>
+<p class="text-sm font-medium text-gray-700">Used Equipment</p>
+<p class="text-xs text-gray-500">Pre-owned items</p>
+</div>
+</div>
+<div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+<label class="custom-switch relative inline-block">
+<input type="checkbox">
+<span class="slider"></span>
+</label>
+<div>
+<p class="text-sm font-medium text-gray-700">Available for Purchase</p>
+<p class="text-xs text-gray-500">Buy outright</p>
+</div>
+</div>
+<div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+<label class="custom-switch relative inline-block">
+<input type="checkbox">
+<span class="slider"></span>
+</label>
+<div>
+<p class="text-sm font-medium text-gray-700">Available for Rent</p>
+<p class="text-xs text-gray-500">Short-term options</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="flex flex-col lg:flex-row gap-8">
+<div id="filterSidebar" class="w-full lg:w-72 lg:block fixed lg:relative top-[72px] bottom-0 left-0 z-40 bg-white lg:bg-transparent p-6 lg:p-0 overflow-y-auto filter-sidebar lg:transform-none">
+<div class="bg-white rounded-lg shadow-sm p-6 sticky top-[88px]">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-lg font-semibold text-gray-900">Filters</h3>
+<button id="closeFilterBtn" class="lg:hidden text-gray-400 hover:text-gray-600">
+<i class="ri-close-line text-xl"></i>
+</button>
+</div>
+
+<div class="mb-6">
+<h4 class="text-sm font-medium text-gray-700 mb-3">Price Range</h4>
+<input type="range" min="0" max="100000" value="50000" class="custom-range mb-4" id="priceRange">
+<div class="flex items-center gap-4">
+<div class="relative flex-1">
+<span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">$</span>
+<input type="number" value="0" min="0" class="w-full pl-8 pr-3 py-2 bg-gray-50 border-none rounded text-sm" id="minPrice">
+</div>
+<span class="text-gray-400">-</span>
+<div class="relative flex-1">
+<span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">$</span>
+<input type="number" value="50000" min="0" class="w-full pl-8 pr-3 py-2 bg-gray-50 border-none rounded text-sm" id="maxPrice">
+</div>
+</div>
+</div>
+
+<div class="mb-6">
+<h4 class="text-sm font-medium text-gray-700 mb-3">Equipment Type</h4>
+<div class="space-y-3">
+<label class="flex items-center gap-3">
+<div class="custom-checkbox">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</div>
+<span class="text-sm text-gray-600">Tractors</span>
+</label>
+<label class="flex items-center gap-3">
+<div class="custom-checkbox">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</div>
+<span class="text-sm text-gray-600">Harvesters</span>
+</label>
+<label class="flex items-center gap-3">
+<div class="custom-checkbox">
+<input type="checkbox">
+<span class="checkmark"></span>
+</div>
+<span class="text-sm text-gray-600">Irrigation Systems</span>
+</label>
+<label class="flex items-center gap-3">
+<div class="custom-checkbox">
+<input type="checkbox">
+<span class="checkmark"></span>
+</div>
+<span class="text-sm text-gray-600">Planting Equipment</span>
+</label>
+<label class="flex items-center gap-3">
+<div class="custom-checkbox">
+<input type="checkbox">
+<span class="checkmark"></span>
+</div>
+<span class="text-sm text-gray-600">Sprayers</span>
+</label>
+</div>
+</div>
+
+<div class="mb-6">
+<h4 class="text-sm font-medium text-gray-700 mb-3">Brand</h4>
+<div class="relative">
+<select class="w-full appearance-none bg-gray-50 border-none rounded px-4 py-2 pr-8 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/30">
+<option value="">All Brands</option>
+<option value="john-deere">Datieko</option>
+<option value="massey-ferguson">Bajuta</option>
+<option value="new-holland">Bajuta Internation ltd</option>
+<option value="kubota">JPM Hardware</option>
+<option value="claas">CLAAS</option>
+</select>
+<div class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none text-gray-500">
+<i class="ri-arrow-down-s-line"></i>
+</div>
+</div>
+</div>
+
+<div class="mb-6">
+<h4 class="text-sm font-medium text-gray-700 mb-3">Condition</h4>
+<div class="space-y-3">
+<label class="flex items-center gap-3">
+<div class="custom-checkbox">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</div>
+<span class="text-sm text-gray-600">New</span>
+</label>
+<label class="flex items-center gap-3">
+<div class="custom-checkbox">
+<input type="checkbox">
+<span class="checkmark"></span>
+</div>
+<span class="text-sm text-gray-600">Used</span>
+</label>
+<label class="flex items-center gap-3">
+<div class="custom-checkbox">
+<input type="checkbox">
+<span class="checkmark"></span>
+</div>
+<span class="text-sm text-gray-600">Refurbished</span>
+</label>
+</div>
+</div>
+
+<div class="mb-6">
+<h4 class="text-sm font-medium text-gray-700 mb-3">Rating</h4>
+<div class="space-y-3">
+<label class="flex items-center gap-3">
+<div class="custom-checkbox">
+<input type="checkbox" checked>
+<span class="checkmark"></span>
+</div>
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-line text-gray-300"></i>
+<span class="ml-1 text-sm text-gray-600">& up</span>
+</div>
+</label>
+<label class="flex items-center gap-3">
+<div class="custom-checkbox">
+<input type="checkbox">
+<span class="checkmark"></span>
+</div>
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-line text-gray-300"></i>
+<i class="ri-star-line text-gray-300"></i>
+<span class="ml-1 text-sm text-gray-600">& up</span>
+</div>
+</label>
+<label class="flex items-center gap-3">
+<div class="custom-checkbox">
+<input type="checkbox">
+<span class="checkmark"></span>
+</div>
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-line text-gray-300"></i>
+<i class="ri-star-line text-gray-300"></i>
+<i class="ri-star-line text-gray-300"></i>
+<span class="ml-1 text-sm text-gray-600">& up</span>
+</div>
+</label>
+</div>
+</div>
+
+<button class="w-full px-4 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 !rounded-button whitespace-nowrap">
+Clear All Filters
+</button>
+</div>
+</div>
+
+<div class="flex-grow">
+<div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-2">
+<span class="text-sm text-gray-500">Showing 1 of 12 results</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative">
+<select class="appearance-none bg-gray-50 border-none rounded px-4 py-2 pr-8 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/30">
+<option value="popular">Sort by: Popular</option>
+<option value="price-low">Price: Low to High</option>
+<option value="price-high">Price: High to Low</option>
+<option value="newest">Newest First</option>
+</select>
+<div class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none text-gray-500">
+<i class="ri-arrow-down-s-line"></i>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-gray-50 rounded p-1">
+<button class="w-8 h-8 flex items-center justify-center rounded bg-white text-primary shadow-sm">
+<i class="ri-layout-grid-line"></i>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded text-gray-400 hover:text-gray-700">
+<i class="ri-list-check"></i>
+</button>
+</div>
+<button id="showFilterBtn" class="lg:hidden px-4 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 !rounded-button whitespace-nowrap flex items-center gap-2">
+<i class="ri-filter-3-line"></i>
+<span>Filters</span>
+</button>
+</div>
+</div>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
+<div class="relative">
+<div class="h-48 bg-gray-100" style="background-image: url('https://readdy.ai/api/search-image?query=modern%2520John%2520Deere%2520tractor%2520in%2520pristine%2520condition%2520on%2520clean%2520white%2520background%252C%2520professional%2520product%2520photography%2520with%2520soft%2520shadows%252C%2520high-end%2520agricultural%2520equipment&width=400&height=300&seq=10&orientation=landscape'); background-size: cover; background-position: center;"></div>
+<div class="absolute top-3 left-3">
+<span class="bg-primary text-white text-xs px-2 py-1 rounded">New</span>
+</div>
+<div class="absolute top-3 right-3">
+<label class="custom-checkbox">
+<input type="checkbox" class="compare-checkbox">
+<span class="checkmark"></span>
+</label>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs text-gray-500">JPM Hardware</span>
+<div class="flex text-yellow-400 text-xs">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+<span class="ml-1 text-gray-500">(42)</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold text-gray-900 mb-2">5E Series Utility Tractor</h3>
+<p class="text-gray-600 text-sm mb-4">55-75 HP | Diesel Engine | 4WD</p>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xl font-bold text-gray-900">Tsh400,500</span>
+<span class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded">In Stock</span>
+</div>
+<button class="w-full px-4 py-2 text-white bg-primary hover:bg-primary/90 !rounded-button whitespace-nowrap">View Details</button>
+</div>
+</div>
+
+<div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
+<div class="relative">
+<div class="h-48 bg-gray-100" style="background-image: url('https://readdy.ai/api/search-image?query=modern%2520Massey%2520Ferguson%2520combine%2520harvester%2520in%2520pristine%2520condition%2520on%2520clean%2520white%2520background%252C%2520professional%2520product%2520photography%2520with%2520soft%2520shadows%252C%2520high-end%2520agricultural%2520equipment&width=400&height=300&seq=11&orientation=landscape'); background-size: cover; background-position: center;"></div>
+<div class="absolute top-3 left-3">
+<span class="bg-primary text-white text-xs px-2 py-1 rounded">New</span>
+</div>
+<div class="absolute top-3 right-3">
+<label class="custom-checkbox">
+<input type="checkbox" class="compare-checkbox">
+<span class="checkmark"></span>
+</label>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs text-gray-500">Dattieko Investiment ltd</span>
+<div class="flex text-yellow-400 text-xs">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-line"></i>
+<span class="ml-1 text-gray-500">(36)</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold text-gray-900 mb-2">IDEAL 9 Combine Harvester</h3>
+<p class="text-gray-600 text-sm mb-4">647 HP | 12,500L Grain Tank | GPS Ready</p>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xl font-bold text-gray-900">Tsh2,000,000</span>
+<span class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded">In Stock</span>
+</div>
+<button class="w-full px-4 py-2 text-white bg-primary hover:bg-primary/90 !rounded-button whitespace-nowrap">View Details</button>
+</div>
+</div>
+
+<div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
+<div class="relative">
+<div class="h-48 bg-gray-100" style="background-image: url('https://readdy.ai/api/search-image?query=modern%2520Valley%2520center%2520pivot%2520irrigation%2520system%2520in%2520pristine%2520condition%2520on%2520clean%2520white%2520background%252C%2520professional%2520product%2520photography%2520with%2520soft%2520shadows%252C%2520high-end%2520agricultural%2520equipment&width=400&height=300&seq=12&orientation=landscape'); background-size: cover; background-position: center;"></div>
+<div class="absolute top-3 left-3">
+<span class="bg-primary text-white text-xs px-2 py-1 rounded">New</span>
+</div>
+<div class="absolute top-3 right-3">
+<label class="custom-checkbox">
+<input type="checkbox" class="compare-checkbox">
+<span class="checkmark"></span>
+</label>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs text-gray-500">Valley</span>
+<div class="flex text-yellow-400 text-xs">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<span class="ml-1 text-gray-500">(58)</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold text-gray-900 mb-2">Center Pivot Irrigation System</h3>
+<p class="text-gray-600 text-sm mb-4">400m Radius | Smart Controls | Water Efficient</p>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xl font-bold text-gray-900">Tsh4,000,000</span>
+<span class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded">In Stock</span>
+</div>
+<button class="w-full px-4 py-2 text-white bg-primary hover:bg-primary/90 !rounded-button whitespace-nowrap">View Details</button>
+</div>
+</div>
+
+<div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
+<div class="relative">
+<div class="h-48 bg-gray-100" style="background-image: url('https://readdy.ai/api/search-image?query=modern%2520Kubota%2520compact%2520tractor%2520with%2520front%2520loader%2520in%2520pristine%2520condition%2520on%2520clean%2520white%2520background%252C%2520professional%2520product%2520photography%2520with%2520soft%2520shadows%252C%2520high-end%2520agricultural%2520equipment&width=400&height=300&seq=13&orientation=landscape'); background-size: cover; background-position: center;"></div>
+<div class="absolute top-3 left-3">
+<span class="bg-orange-500 text-white text-xs px-2 py-1 rounded">Used</span>
+</div>
+<div class="absolute top-3 right-3">
+<label class="custom-checkbox">
+<input type="checkbox" class="compare-checkbox">
+<span class="checkmark"></span>
+</label>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs text-gray-500">Bajuta Internation ltd</span>
+<div class="flex text-yellow-400 text-xs">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+<i class="ri-star-line"></i>
+<span class="ml-1 text-gray-500">(19)</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold text-gray-900 mb-2">BX Series Compact Tractor</h3>
+<p class="text-gray-600 text-sm mb-4">23 HP | Diesel | Front Loader Included</p>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xl font-bold text-gray-900">Tsh900,000.</span>
+<span class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded">In Stock</span>
+</div>
+<button class="w-full px-4 py-2 text-white bg-primary hover:bg-primary/90 !rounded-button whitespace-nowrap">View Details</button>
+</div>
+</div>
+
+<div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
+<div class="relative">
+<div class="h-48 bg-gray-100" style="background-image: url('https://readdy.ai/api/search-image?query=modern%2520John%2520Deere%2520precision%2520planter%2520in%2520pristine%2520condition%2520on%2520clean%2520white%2520background%252C%2520professional%2520product%2520photography%2520with%2520soft%2520shadows%252C%2520high-end%2520agricultural%2520equipment&width=400&height=300&seq=14&orientation=landscape'); background-size: cover; background-position: center;"></div>
+<div class="absolute top-3 left-3">
+<span class="bg-primary text-white text-xs px-2 py-1 rounded">New</span>
+</div>
+<div class="absolute top-3 right-3">
+<label class="custom-checkbox">
+<input type="checkbox" class="compare-checkbox">
+<span class="checkmark"></span>
+</label>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs text-gray-500">Dattieko Investiment</span>
+<div class="flex text-yellow-400 text-xs">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-line"></i>
+<span class="ml-1 text-gray-500">(27)</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold text-gray-900 mb-2">ExactEmerge Planter</h3>
+<p class="text-gray-600 text-sm mb-4">24-Row | Precision Planting | GPS Ready</p>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xl font-bold text-gray-900">Tsh500,000.</span>
+<span class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded">In Stock</span>
+</div>
+<button class="w-full px-4 py-2 text-white bg-primary hover:bg-primary/90 !rounded-button whitespace-nowrap">View Details</button>
+</div>
+</div>
+
+<div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
+<div class="relative">
+<div class="h-48 bg-gray-100" style="background-image: url('https://readdy.ai/api/search-image?query=modern%2520New%2520Holland%2520tractor%2520in%2520pristine%2520condition%2520on%2520clean%2520white%2520background%252C%2520professional%2520product%2520photography%2520with%2520soft%2520shadows%252C%2520high-end%2520agricultural%2520equipment&width=400&height=300&seq=15&orientation=landscape'); background-size: cover; background-position: center;"></div>
+<div class="absolute top-3 left-3">
+<span class="bg-purple-500 text-white text-xs px-2 py-1 rounded">Refurbished</span>
+</div>
+<div class="absolute top-3 right-3">
+<label class="custom-checkbox">
+<input type="checkbox" class="compare-checkbox">
+<span class="checkmark"></span>
+</label>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs text-gray-500">Epinav Agricultural</span>
+<div class="flex text-yellow-400 text-xs">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-line"></i>
+<span class="ml-1 text-gray-500">(31)</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold text-gray-900 mb-2">T7 Heavy Duty Tractor</h3>
+<p class="text-gray-600 text-sm mb-4">290-315 HP | Auto Command | IntelliView IV</p>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xl font-bold text-gray-900">Tsh1,000,000</span>
+<span class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded">In Stock</span>
+</div>
+<button class="w-full px-4 py-2 text-white bg-primary hover:bg-primary/90 !rounded-button whitespace-nowrap">View Details</button>
+</div>
+</div>
+</div>
+
+<div class="flex justify-center mt-8">
+<nav class="flex items-center gap-1">
+<button class="w-10 h-10 flex items-center justify-center rounded border border-gray-200 text-gray-500 hover:border-primary hover:text-primary">
+<i class="ri-arrow-left-s-line"></i>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded bg-primary text-white">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded border border-gray-200 text-gray-700 hover:border-primary hover:text-primary">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded border border-gray-200 text-gray-700 hover:border-primary hover:text-primary">3</button>
+<button class="w-10 h-10 flex items-center justify-center rounded border border-gray-200 text-gray-700 hover:border-primary hover:text-primary">4</button>
+<span class="w-10 h-10 flex items-center justify-center text-gray-500">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded border border-gray-200 text-gray-700 hover:border-primary hover:text-primary">12</button>
+<button class="w-10 h-10 flex items-center justify-center rounded border border-gray-200 text-gray-500 hover:border-primary hover:text-primary">
+<i class="ri-arrow-right-s-line"></i>
+</button>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+<div id="comparisonBar" class="fixed bottom-0 left-0 right-0 bg-white shadow-lg border-t border-gray-200 z-40 comparison-bar">
+<div class="container mx-auto px-6 py-4">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-lg font-semibold text-gray-900">Compare Items <span id="compareCount" class="text-primary">(0)</span></h3>
+<div class="flex items-center gap-4">
+<button id="clearCompareBtn" class="text-sm text-gray-500 hover:text-gray-700">Clear All</button>
+<button id="closeCompareBtn" class="text-gray-400 hover:text-gray-600">
+<i class="ri-close-line text-xl"></i>
+</button>
+</div>
+</div>
+<div id="compareItems" class="grid grid-cols-4 gap-4">
+<div class="bg-gray-50 rounded-lg p-4 flex flex-col items-center justify-center h-32 border-2 border-dashed border-gray-200">
+<div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center mb-2">
+<i class="ri-add-line text-gray-400"></i>
+</div>
+<p class="text-sm text-gray-400">Add item to compare</p>
+</div>
+<div class="bg-gray-50 rounded-lg p-4 flex flex-col items-center justify-center h-32 border-2 border-dashed border-gray-200">
+<div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center mb-2">
+<i class="ri-add-line text-gray-400"></i>
+</div>
+<p class="text-sm text-gray-400">Add item to compare</p>
+</div>
+<div class="bg-gray-50 rounded-lg p-4 flex flex-col items-center justify-center h-32 border-2 border-dashed border-gray-200">
+<div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center mb-2">
+<i class="ri-add-line text-gray-400"></i>
+</div>
+<p class="text-sm text-gray-400">Add item to compare</p>
+</div>
+<div class="bg-gray-50 rounded-lg p-4 flex flex-col items-center justify-center h-32 border-2 border-dashed border-gray-200">
+<div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center mb-2">
+<i class="ri-add-line text-gray-400"></i>
+</div>
+<p class="text-sm text-gray-400">Add item to compare</p>
+</div>
+</div>
+<div class="flex justify-center mt-4">
+<button id="compareNowBtn" class="px-6 py-3 text-white bg-primary hover:bg-primary/90 !rounded-button whitespace-nowrap opacity-50 cursor-not-allowed">
+Compare Now
+</button>
+</div>
+</div>
+</div>
+
+<div class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden" id="filterOverlay"></div>
+<footer class="bg-gray-900 text-gray-400 py-12 mt-16">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div>
+<a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 block"> <img src="Image/SHAMBA-DIRECT-LOGO-OG-removebg-preview.png" alt=""></a>
+<p class="text-sm">Empowering farmers with modern agricultural solutions</p>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-4">Quick Links</h4>
+<ul class="space-y-2">
+<li><a href="https://readdy.ai/home/964af3e1-e864-45e8-a529-b0bea30365e8/d754d7d3-b070-4401-a3f9-54d698fada44" data-readdy="true" class="text-sm hover:text-white">Equipment</a></li>
+<li><a href="#" class="text-sm hover:text-white">Suppliers</a></li>
+<li><a href="#" class="text-sm hover:text-white">Financing</a></li>
+<li><a href="#" class="text-sm hover:text-white">Support</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-4">Contact</h4>
+<ul class="space-y-2">
+<li class="text-sm">Email: shambadirecttz@gmail.com</li>
+<li class="text-sm">Phone: +255 752607104</li>
+<li class="text-sm">WhatsApp: +255 750586178</li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-4">Follow Us</h4>
+<div class="flex gap-4">
+<a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700">
+<i class="ri-instagram-fill"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 text-sm text-center">
+<p>&copy; 2025 Shamba Direct. All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const showFilterBtn = document.getElementById('showFilterBtn');
+const closeFilterBtn = document.getElementById('closeFilterBtn');
+const filterSidebar = document.getElementById('filterSidebar');
+const filterOverlay = document.getElementById('filterOverlay');
+
+showFilterBtn.addEventListener('click', function() {
+filterSidebar.classList.add('active');
+filterOverlay.classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+});
+
+closeFilterBtn.addEventListener('click', function() {
+filterSidebar.classList.remove('active');
+filterOverlay.classList.add('hidden');
+document.body.style.overflow = '';
+});
+
+filterOverlay.addEventListener('click', function() {
+filterSidebar.classList.remove('active');
+filterOverlay.classList.add('hidden');
+document.body.style.overflow = '';
+});
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+const priceRange = document.getElementById('priceRange');
+const minPrice = document.getElementById('minPrice');
+const maxPrice = document.getElementById('maxPrice');
+priceRange.addEventListener('input', function() {
+maxPrice.value = this.value;
+});
+
+minPrice.addEventListener('input', function() {
+if (parseInt(this.value) > parseInt(maxPrice.value)) {
+this.value = maxPrice.value;
+}
+});
+
+maxPrice.addEventListener('input', function() {
+if (parseInt(this.value) < parseInt(minPrice.value)) {
+this.value = minPrice.value;
+}
+priceRange.value = this.value;
+});
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+const compareCheckboxes = document.querySelectorAll('.compare-checkbox');
+const comparisonBar = document.getElementById('comparisonBar');
+const compareCount = document.getElementById('compareCount');
+const compareNowBtn = document.getElementById('compareNowBtn');
+const clearCompareBtn = document.getElementById('clearCompareBtn');
+const closeCompareBtn = document.getElementById('closeCompareBtn');
+const compareItems = document.getElementById('compareItems');
+let selectedCount = 0;
+const maxCompare = 4;
+
+compareCheckboxes.forEach(checkbox => {
+checkbox.addEventListener('change', function() {
+if (this.checked) {
+if (selectedCount < maxCompare) {
+selectedCount++;
+updateComparisonBar();
+} else {
+this.checked = false;
+alert('You can compare up to 4 items at a time.');
+}
+} else {
+selectedCount--;
+updateComparisonBar();
+}
+});
+});
+
+function updateComparisonBar() {
+compareCount.textContent = `(${selectedCount})`;
+if (selectedCount > 0) {
+comparisonBar.classList.add('active');
+compareNowBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+} else {
+comparisonBar.classList.remove('active');
+compareNowBtn.classList.add('opacity-50', 'cursor-not-allowed');
+}
+}
+
+clearCompareBtn.addEventListener('click', function() {
+compareCheckboxes.forEach(checkbox => {
+checkbox.checked = false;
+});
+selectedCount = 0;
+updateComparisonBar();
+});
+
+closeCompareBtn.addEventListener('click', function() {
+comparisonBar.classList.remove('active');
+});
+});
+</script>
+</body>
+</html>

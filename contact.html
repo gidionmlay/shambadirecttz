@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact – Shamba Direct</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-yH6f/1QXsljpoX3xVZfm3k4mv2FZEfriQY7qFWG4N3X9H7sP0FkF6Wwaz9W1hNHkUHS8pL2T2w3xrYqD6vY5hA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <style>
+    /* Reset & base */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; background: #f5f5f5; color: #333; }
+
+    /* Header */
+
+.shamba-navbar {
+  background-color: #D5FEE3;
+  padding: 15px 30px;
+  border-radius: 20px;
+  margin: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-img {
+  height: 40px;
+}
+
+.main-nav a {
+  margin: 0 12px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.main-nav a:hover {
+  color: #11893c;
+}
+
+.icon-section i {
+  font-size: 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.auth-section {
+  display: flex;
+  align-items: center;
+}
+
+.login-btn {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.register-btn {
+  background-color: #d5ff00;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.register-btn:hover {
+  background-color: #c6ef00;
+}
+
+    /* Section wrapper */
+    .contact-section {
+      padding: 60px 20px;
+    }
+    .contact-section .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .contact-section h2 {
+      color: #0d4d22;
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 32px;
+    }
+    .contact-section p.lead {
+      text-align: center;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    /* Grid */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    /* Card base */
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      padding: 30px;
+    }
+
+    /* Contact form */
+    .contact-form h3 {
+      margin-bottom: 20px;
+      color: #0d4d22;
+    }
+    .contact-form .form-group {
+      margin-bottom: 15px;
+    }
+    .contact-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    .contact-form button {
+      display: inline-flex;
+      align-items: center;
+      background-color: #0d4d22;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .contact-form button i {
+      margin-right: 8px;
+    }
+    .contact-form button:hover {
+      background-color: #0b3f1a;
+    }
+
+    /* Info cards */
+    .info-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .info-card h4 {
+      color: #0d4d22;
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+    .info-card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .info-card ul li {
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      font-size: 15px;
+      color: #444;
+    }
+    .info-card ul li i {
+      color: #a4d65e;
+      margin-right: 12px;
+      font-size: 18px;
+      width: 24px;
+      text-align: center;
+    }
+
+    /* Social links in Connect */
+    .social-list li i {
+      width: 24px;
+    }
+    .social-list li a {
+      color: #0d4d22;
+      text-decoration: none;
+    }
+    .social-list li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Map */
+    .map-section h3 {
+      color: #0d4d22;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    .map-container {
+      width: 100%;
+      height: 400px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    /* Only footer & contact‑page icons */
+.footer-col i,
+.info-card i,
+.social-list li i,
+.contact-form button i {
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-col i:hover,
+.info-card i:hover,
+.social-list li:hover i,
+.contact-form button:hover i {
+  color: #a4d65e;
+  transform: scale(1.2);
+}
+
+
+    /* Responsive tweaks */
+    @media (min-width: 768px) {
+      .info-cards { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+   
+  <header class="shamba-navbar">
+    <div class="navbar-container">
+      <div class="logo-section">
+        <img src="images/SHAMBA-DIRECT-LOGO-OG-removebg-preview.png" alt="Shamba Direct Logo" class="logo-img">
+      </div>
+  
+      <nav class="main-nav">
+        <a href="home.html">Home</a>
+        <a href="Product.html">Service</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Reach Us</a>
+      </nav>
+  
+      <div class="icon-section">
+        <i class="ri-search-line"></i>
+        <i class="ri-sun-line" id="theme-toggle"></i>
+        <i class="ri-global-line"></i>
+        <i class="ri-shopping-cart-line"></i>
+        <i class="ri-user-line"></i>
+      </div>
+  
+      <div class="auth-section">
+        <a href="login.html" class="login-btn">Log in</a>
+        <a href="registration.html" class="register-btn">Register</a>
+      </div>
+    </div>
+  </header>
+  
+
+  <section class="contact-section">
+    <div class="container">
+      <h2>Reach Us</h2>
+      <p class="lead">We’re here to support you every step of the way. Whether you’re a farmer, supplier, or partner—don’t hesitate to reach out.</p>
+
+      <div class="contact-grid">
+        <!-- Left: Contact Form -->
+        <div class="card contact-form">
+          <h3>Contact Form</h3>
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+255 712 345 678" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="How can we help you?" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Please describe your inquiry in detail..." required></textarea>
+            </div>
+            <button type="submit"><i class="fas fa-paper-plane"></i>Send Message</button>
+          </form>
+        </div>
+
+        <!-- Right: Info Cards -->
+        <div class="info-cards">
+          <!-- Contact Information -->
+          <div class="card info-card">
+            <h4>Contact Information</h4>
+            <ul>
+              <li><i class="fas fa-phone-alt"></i><span>+255 712 345 678 <small>(Also on WhatsApp)</small></span></li>
+              <li><i class="fas fa-envelope"></i><span>support@shambadirect.com</span></li>
+              <li><i class="fas fa-map-marker-alt"></i><span>Plot 45, Mlimani Road, Arusha, Tanzania</span></li>
+            </ul>
+          </div>
+
+          <!-- Working Hours -->
+          <div class="card info-card">
+            <h4>Working Hours</h4>
+            <ul>
+              <li><i class="far fa-clock"></i>
+                <strong>Monday – Saturday</strong>
+                <span style="margin-left: auto;">8:00 AM – 6:00 PM</span>
+              </li>
+              <li><i class="far fa-clock"></i>
+                <strong>Sunday & Holidays</strong>
+                <span style="margin-left: auto;">Closed</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Connect With Us -->
+          <div class="card info-card">
+            <h4>Connect With Us</h4>
+            <p>Follow and chat with us on social media:</p>
+            <ul class="social-list">
+              <li><i class="fab fa-facebook-f"></i><a href="#">facebook.com/shambadirect</a></li>
+              <li><i class="fab fa-instagram"></i><a href="#">@shambadirect</a></li>
+              <li><i class="fab fa-twitter"></i><a href="#">@shambadirect</a></li>
+              <li><i class="fab fa-whatsapp"></i><a href="#">WhatsApp: Click to Chat</a></li>
+              <li><i class="fab fa-linkedin-in"></i><a href="#">linkedin.com/company/shambadirect</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="map-section">
+        <h3>Find Us on the Map</h3>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15760.280203347054!2d36.78405483357172!3d-3.3664737420197773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4b6646c84951%3A0x60119ea097cd5c12!2sArusha%2C%20Tanzania!5e0!3m2!1sen!2sus!4v1602955134262!5m2!1sen!2sus"
+            allowfullscreen=""
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

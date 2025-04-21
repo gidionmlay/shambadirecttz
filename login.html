@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shamba Direct — Login</title>
+
+  <!-- Remixicon for eye / eye-off icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #F7F8FA;
+    }
+    .login-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 1rem;
+    }
+    .login-box {
+      display: flex;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      overflow: hidden;
+      max-width: 900px;
+      width: 100%;
+    }
+    .login-image {
+      flex: 1;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .login-image img {
+      max-width: 100%;
+      height: auto;
+    }
+    .login-form {
+      flex: 1;
+      padding: 2.5rem 2rem;
+    }
+    .login-form h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #007d51;
+      align-items: center;
+    }
+    .login-form p.tagline {
+      font-size: 0.9rem;
+      margin-bottom: 1.75rem;
+      color: #666;
+    }
+    .login-form form .form-group {
+      margin-bottom: 1.25rem;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 0.25rem;
+      color: #444;
+    }
+    .form-group input[type="tel"],
+    .form-group input[type="password"],
+    .form-group select {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid #DDD;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      color: #333;
+    }
+    .phone-group {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .phone-group select {
+      max-width: 100px;
+    }
+    .password-wrapper {
+      position: relative;
+    }
+    .password-wrapper i {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #888;
+    }
+    .form-group small {
+      display: block;
+      margin-top: 0.25rem;
+      color: #999;
+      font-size: 0.8rem;
+    }
+    .role-group {
+      display: flex;
+      gap: 2rem;
+      font-size: 0.9rem;
+    }
+    .role-group label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+    }
+    .role-group input {
+      margin: 0;
+    }
+    .terms {
+      font-size: 0.85rem;
+    }
+    .terms label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+    }
+    .terms a {
+      color: #00ff37a8;
+      text-decoration: none;
+    }
+    .terms a:hover {
+      text-decoration: underline;
+    }
+    .btn-login {
+      width: 100%;
+      padding: 0.85rem;
+      background-color: #00672e;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-login:hover {
+      background-color: #a9e600;
+    }
+    .register-text {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .register-text a {
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .register-text a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .login-box {
+        flex-direction: column;
+      }
+      .login-image, .login-form {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <div class="login-box">
+
+      <!-- Left side: logo/image -->
+      <div class="login-image">
+        <img
+          src="Image/SHAMBA-DIRECT-LOGO-OG-removebg-preview.png"
+          alt="Shamba Direct Logo"
+        />
+      </div>
+
+      <!-- Right side: form -->
+      <div class="login-form">
+        <h1 class="welcome">Welcome</h1>
+        <p class="tagline">
+          Sign in to access your dashboard. You're already a Shamba Direct Family.
+        </p>
+
+        <form>
+          <!-- Phone -->
+          <div class="form-group phone-group">
+            <select name="country-code">
+              <option>+255</option>
+              <!-- add other codes if needed -->
+            </select>
+            <input
+              type="tel"
+              name="phone"
+              placeholder="7XX XXX XXX"
+              required
+            />
+          </div>
+
+          <!-- Password -->
+          <div class="form-group password-wrapper">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              minlength="8"
+              required
+            />
+            <i class="ri-eye-line" onclick="togglePassword()"></i>
+            <small>Must be at least 8 characters long</small>
+          </div>
+
+          <!-- Role -->
+          <div class="form-group role-group">
+            <label><input type="radio" name="role" value="farmer" checked /> Farmer</label>
+            <label><input type="radio" name="role" value="supplier" /> Supplier</label>
+          </div>
+
+          <!-- Terms -->
+          <div class="form-group terms">
+            <label>
+              <input type="checkbox" required/>
+              <span>
+                I agree to the
+                <a href="#">Terms of Service</a>
+                and
+                <a href="#">Privacy Policy</a>
+              </span>
+            </label>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="btn-login">Login In</button>
+        </form>
+
+        <p class="register-text">
+          Don’t have an account?
+          <a href="register.html">Register</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const pw = document.getElementById('password');
+      const icon = document.querySelector('.password-wrapper i');
+      if (pw.type === 'password') {
+        pw.type = 'text';
+        icon.classList.replace('ri-eye-line', 'ri-eye-off-line');
+      } else {
+        pw.type = 'password';
+        icon.classList.replace('ri-eye-off-line', 'ri-eye-line');
+      }
+    }
+  </script>
+</body>
+</html>
