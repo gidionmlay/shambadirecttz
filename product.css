@@ -62,7 +62,7 @@ top: 0;
 left: 0;
 right: 0;
 bottom: 0;
-background-color: #6aff91;
+background-color: #27ff60;
 transition: .4s;
 border-radius: 999px;
 }
@@ -125,3 +125,104 @@ transform: translateX(-100%);
 transform: translateX(0);
 }
 }
+/* Container for the navbar section */
+    .navbar-section {
+      background-color: #ffffff;
+      padding: 20px 40px;
+    }
+
+    /* Main navbar styling */
+    .navbar {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Logo styling */
+    .navbar .logo img {
+      height: 40px;
+    }
+
+    /* Navigation links list */
+    .navbar .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Individual link styling */
+    .navbar .nav-links a {
+      text-decoration: none;
+      color: #003a26;
+      font-weight: 500;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    /* Active or hovered link */
+    .navbar .nav-links a.active,
+    .navbar .nav-links a:hover {
+      color: #e8e41d;
+    }
+
+    /* Actions on the right: language toggle, login, register */
+    .navbar .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* Language toggle background */
+    .lang-toggle {
+      display: flex;
+      background-color: #F2F4F7;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    /* Language button styling */
+    .lang-toggle .lang {
+      border: none;
+      background: none;
+      padding: 8px 12px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    /* Highlighted language */
+    .lang-toggle .lang.active {
+      background-color: #FFFFFF;
+      font-weight: 600;
+    }
+
+    /* Login link */
+    .navbar .login {
+      text-decoration: none;
+      color: #333333;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .navbar .login:hover {
+      color: #00753c;
+    }
+
+    /* Register button */
+    .navbar .register {
+      text-decoration: none;
+      background-color: #cbfd4d;
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .navbar .register:hover {
+      background-color: #088414;
+    }
