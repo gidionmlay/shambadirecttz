@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier Registration - Shamba Direct</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/pages/styles/registration for supply.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="registration-container">
+        <div class="logo-section">
+            <div class="shamba-direct-logo">
+                <img src="/assets/images/SHAMBA-DIRECT-LOGO-OG-removebg-preview.png" alt="Shamba Direct Logo">
+            </div>
+            <div class="logo-text">
+                <h2>Partner with Shamba Direct.</h2>
+                <p>Expand your reach and connect with farmers across Tanzania.</p>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="form-card">
+                <h2>Supplier Registration</h2>
+                <p class="subtitle">Join our network of trusted agro-input suppliers.</p>
+
+                <div class="progress-bar-container">
+                    <div class="progress-step active" data-step="1"></div>
+                    <div class="progress-step" data-step="2"></div>
+                    <div class="progress-step" data-step="3"></div>
+                    <div class="progress-step" data-step="4"></div>
+                    <div class="progress-step" data-step="5"></div>
+                    <div class="progress-line"></div>
+                    <div class="progress-line-fill"></div>
+                </div>
+
+                <form id="supplierRegistrationForm">
+                    <div class="form-step active" id="step-1">
+                        <h3>Company Information</h3>
+                        <div class="form-group">
+                            <label for="companyName">Company Name <span class="required">*</span></label>
+                            <input type="text" id="companyName" name="companyName" placeholder="e.g., Green Harvest Ltd." required>
+                            <div class="error-message" id="companyName-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="businessRegNo">Business Registration Number <span class="required">*</span></label>
+                            <input type="text" id="businessRegNo" name="businessRegNo" placeholder="e.g., BRN/123456/2020" required>
+                            <div class="error-message" id="businessRegNo-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="productType">Type of Products <span class="required">*</span></label>
+                            <select id="productType" name="productType" multiple required>
+                                <option value="seeds">Seeds</option>
+                                <option value="fertilizers">Fertilizers</option>
+                                <option value="pesticides">Pesticides</option>
+                                <option value="tools">Tools & Equipment</option>
+                                <option value="other">Other Agro-Inputs</option>
+                            </select>
+                            <p class="hint">Hold Ctrl/Cmd to select multiple.</p>
+                            <div class="error-message" id="productType-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="yearsOperation">Years in Operation</label>
+                            <input type="number" id="yearsOperation" name="yearsOperation" min="0" max="100" placeholder="e.g., 5">
+                        </div>
+                        <button type="button" class="next-step-btn" data-step="2">Next <i class="ri-arrow-right-line"></i></button>
+                    </div>
+
+                    <div class="form-step" id="step-2">
+                        <h3>Contact Person Details</h3>
+                        <div class="form-group">
+                            <label for="contactFullName">Full Name <span class="required">*</span></label>
+                            <input type="text" id="contactFullName" name="contactFullName" placeholder="Contact person's full name" required>
+                            <div class="error-message" id="contactFullName-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactPhone">Phone Number <span class="required">*</span></label>
+                            <input type="tel" id="contactPhone" name="contactPhone" placeholder="e.g., +2557XXXXXXXX" required>
+                            <div class="error-message" id="contactPhone-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address <span class="required">*</span></label>
+                            <input type="email" id="contactEmail" name="contactEmail" placeholder="e.g., contact@company.com" required>
+                            <div class="error-message" id="contactEmail-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactPosition">Position/Title</label>
+                            <input type="text" id="contactPosition" name="contactPosition" placeholder="e.g., Sales Manager">
+                        </div>
+                        <div class="form-navigation">
+                            <button type="button" class="prev-step-btn" data-step="1"><i class="ri-arrow-left-line"></i> Previous</button>
+                            <button type="button" class="next-step-btn" data-step="3">Next <i class="ri-arrow-right-line"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="form-step" id="step-3">
+                        <h3>Location Details</h3>
+                        <div class="form-group">
+                            <label for="region">Region <span class="required">*</span></label>
+                            <select id="region" name="region" required>
+                                <option value="">Select Region</option>
+                                </select>
+                            <div class="error-message" id="region-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="district">District <span class="required">*</span></label>
+                            <select id="district" name="district" required disabled>
+                                <option value="">Select District</option>
+                                </select>
+                            <div class="error-message" id="district-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="wardVillage">Ward/Village</label>
+                            <input type="text" id="wardVillage" name="wardVillage" placeholder="Optional (e.g., Ward/Village name)">
+                        </div>
+                        <div class="form-group">
+                            <label for="businessAddress">Business Address <span class="required">*</span></label>
+                            <textarea id="businessAddress" name="businessAddress" rows="3" placeholder="Street, building, landmark, etc." required></textarea>
+                            <div class="error-message" id="businessAddress-error"></div>
+                        </div>
+                        <div class="form-navigation">
+                            <button type="button" class="prev-step-btn" data-step="2"><i class="ri-arrow-left-line"></i> Previous</button>
+                            <button type="button" class="next-step-btn" data-step="4">Next <i class="ri-arrow-right-line"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="form-step" id="step-4">
+                        <h3>Verification & Documents</h3>
+                        <div class="form-group">
+                            <label for="regCertificateUpload">Upload Certificate of Registration <span class="required">*</span></label>
+                            <div class="upload-area">
+                                <input type="file" id="regCertificateUpload" name="regCertificateUpload" accept=".pdf,image/*" style="display: none;" required>
+                                <label for="regCertificateUpload" class="upload-btn"><i class="ri-upload-cloud-line"></i> Choose File</label>
+                                <span id="regCertificateFileName">No file chosen</span>
+                            </div>
+                            <p class="hint">Accepted: PDF or Image (Max 5MB)</p>
+                            <div class="error-message" id="regCertificateUpload-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="businessLicenseUpload">Upload Business License</label>
+                            <div class="upload-area">
+                                <input type="file" id="businessLicenseUpload" name="businessLicenseUpload" accept=".pdf,image/*" style="display: none;">
+                                <label for="businessLicenseUpload" class="upload-btn"><i class="ri-upload-cloud-line"></i> Choose File (Optional)</label>
+                                <span id="businessLicenseFileName">No file chosen</span>
+                            </div>
+                            <p class="hint">Accepted: PDF or Image (Max 5MB)</p>
+                        </div>
+                        <div class="form-group placeholder-section">
+                            <h4>Optional: Location Verification</h4>
+                            <p>Upload a map pin or screenshot for delivery verification (Max 2MB).</p>
+                            <div class="upload-area">
+                                <input type="file" id="locationGpsUpload" name="locationGpsUpload" accept="image/*" style="display: none;">
+                                <label for="locationGpsUpload" class="upload-btn"><i class="ri-map-pin-line"></i> Upload Map/GPS</label>
+                                <span id="locationGpsFileName">No file chosen</span>
+                            </div>
+                        </div>
+                        <div class="form-navigation">
+                            <button type="button" class="prev-step-btn" data-step="3"><i class="ri-arrow-left-line"></i> Previous</button>
+                            <button type="button" class="next-step-btn" data-step="5">Next <i class="ri-arrow-right-line"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="form-step" id="step-5">
+                        <h3>Account Setup</h3>
+                        <div class="form-group">
+                            <label for="username">Username <span class="required">*</span></label>
+                            <input type="text" id="username" name="username" placeholder="Choose a unique username" required>
+                            <div class="error-message" id="username-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password <span class="required">*</span></label>
+                            <input type="password" id="password" name="password" placeholder="Min 8 characters" required>
+                            <div class="error-message" id="password-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password <span class="required">*</span></label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter password" required>
+                            <div class="error-message" id="confirmPassword-error"></div>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">I agree to the <a href="#">Terms and Conditions</a> <span class="required">*</span></label>
+                            <div class="error-message" id="terms-error"></div>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="prev-step-btn" data-step="4"><i class="ri-arrow-left-line"></i> Previous</button>
+                            <button type="submit" class="submit-btn" id="submitBtn">
+                                <span class="btn-text">Register Supplier</span>
+                                <span class="loading-spinner" style="display: none;"></span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/pages/scripts/supplier-registration.js"></script>
+ </body>
+</html>

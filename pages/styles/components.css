@@ -1,0 +1,17 @@
+.navbar {
+  background-color: #2e7d32;
+  color: white;
+  padding: 1rem;
+}
+.footer {
+  background: #f1f1f1;
+  text-align: center;
+  padding: 1rem;
+}
+.button-primary {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}

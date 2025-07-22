@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Shamba Direct</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/pages/styles/login.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <div class="branding-section">
+            <div class="logo-area">
+                <img src="/assets/images/SHAMBA-DIRECT-LOGO-OG-removebg-preview.png" alt="Shamba Direct Logo">
+                <p class="tagline">Empowering Farmers. Supporting Suppliers. Growing Together.</p>
+            </div>
+            <div class="illustration-overlay"></div>
+        </div>
+        <div class="login-form-section">
+            <div class="login-card">
+                <h2>Welcome Back</h2>
+
+                <div class="role-tabs">
+                    <button class="tab-button active" data-role="farmer">Farmer</button>
+                    <button class="tab-button" data-role="supplier">Supplier</button>
+                    <button class="tab-button" data-role="admin">Admin</button>
+                </div>
+
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="emailPhone">Email or Phone Number</label>
+                        <input type="text" id="emailPhone" name="emailPhone" placeholder="Enter your email or phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="forgot-password">
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="login-button">Login</button>
+                </form>
+
+                <div class="divider">OR</div>
+
+                <div class="register-section">
+                    <p id="registerText">Don't have an account? Register as a Farmer.</p>
+                    <a href="/pages/public/registration.html"><button class="register-button" id="registerNowBtn">Register Now</button></a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/pages/scripts/login.js"></script>
+</body>
+</html>

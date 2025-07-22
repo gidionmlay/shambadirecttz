@@ -1,0 +1,627 @@
+/* --- Root Variables (Shamba Direct Brand Colors) --- */
+:root {
+    --primary-green: #67B749;
+    --primary-green-dark: #56a03d; /* Slightly darker for hover */
+    --accent-light-gray: #D3D3D3;
+    --accent-light-gray-hover: #c0c0c0;
+    --text-dark: #333333;
+    --text-medium: #4B4B4B;
+    --text-light: #777777;
+    --bg-white: #FFFFFF;
+    --border-color: #E0E0E0;
+    --error-red: #E74C3C;
+    --shadow-light: rgba(0, 0, 0, 0.08);
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+    --transition-speed: 0.3s;
+}
+
+/* --- General Body and Container Styles --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-medium);
+    background-color: var(--bg-white);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative; /* For background grid lines */
+}
+
+/* Background grid lines */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(to right, rgba(103, 183, 73, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(103, 183, 73, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px; /* Adjust grid line density */
+    z-index: -1;
+}
+
+/* --- Registration Container Layout --- */
+.registration-container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    background-color: var(--bg-white);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px var(--shadow-medium);
+    overflow: hidden;
+    min-height: 750px; /* Adjust min-height as needed for content */
+    margin: 40px 0; /* Vertical margin for smaller screens */
+}
+
+/* --- Left Logo Section --- */
+.logo-section {
+    flex: 1;
+    background: linear-gradient(135deg, var(--primary-green-dark) 0%, var(--primary-green) 100%);
+    color: var(--bg-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative elements for the logo section */
+.logo-section::before,
+.logo-section::after {
+    content: '';
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.logo-section::before {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    left: -50px;
+    transform: rotate(45deg);
+}
+
+.logo-section::after {
+    width: 250px;
+    height: 250px;
+    bottom: -50px;
+    right: -50px;
+    transform: rotate(-30deg);
+}
+
+.shamba-direct-logo {
+    position: relative;
+    z-index: 2; /* Ensure logo is above decorative elements */
+}
+
+.shamba-direct-logo img {
+    max-width: 180px;
+    height: auto;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
+}
+
+.logo-text {
+    position: relative;
+    z-index: 2; /* Ensure text is above decorative elements */
+}
+
+.logo-text h2 {
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo-text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 350px;
+}
+
+/* --- Main Registration Form Section --- */
+.form-section {
+    flex: 2; /* Takes more space on desktop */
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center form vertically if it's not too tall */
+}
+
+.form-card {
+    width: 100%;
+    max-width: 550px; /* Max width for the form within its section */
+}
+
+.form-card h2 {
+    color: var(--text-dark);
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.form-card .subtitle {
+    font-size: 1.1em;
+    color: var(--text-medium);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* --- Progress Bar --- */
+.progress-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.progress-step {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--accent-light-gray);
+    color: var(--bg-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 0.9em;
+    position: relative;
+    z-index: 10;
+    transition: background-color var(--transition-speed);
+}
+
+.progress-step::after {
+    content: attr(data-step); /* Displays the step number */
+}
+
+.progress-step.active {
+    background-color: var(--primary-green);
+}
+
+.progress-step.completed {
+    background-color: var(--primary-green);
+}
+
+.progress-line {
+    position: absolute;
+    width: calc(100% - 70px); /* Adjust based on step circle width */
+    height: 4px;
+    background-color: var(--accent-light-gray);
+    left: 35px; /* Half of circle width */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    border-radius: 2px;
+}
+
+.progress-line-fill {
+    position: absolute;
+    height: 4px;
+    background-color: var(--primary-green);
+    left: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 7;
+    width: 0%; /* Will be controlled by JS */
+    transition: width var(--transition-speed) ease-in-out;
+    border-radius: 2px;
+}
+
+/* --- Form Steps --- */
+.form-step {
+    display: none; /* Hidden by default */
+    animation: fadeIn 0.5s ease-out;
+}
+
+.form-step.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.form-step h3 {
+    color: var(--text-dark);
+    font-size: 1.6em;
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.form-group .required {
+    color: var(--error-red);
+    margin-left: 4px;
+}
+
+.form-group input:not([type="checkbox"]),
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1em;
+    color: var(--text-dark);
+    background-color: var(--bg-white);
+    outline: none;
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 3px rgba(103, 183, 73, 0.15);
+}
+
+/* Error messages */
+.error-message {
+    color: var(--error-red);
+    font-size: 0.85em;
+    margin-top: 5px;
+    height: 18px; /* Reserve space to prevent layout shift */
+    display: none; /* Hide by default */
+}
+.error-message.active {
+    display: block;
+}
+input.invalid, select.invalid, textarea.invalid {
+    border-color: var(--error-red) !important;
+}
+
+
+/* Specific input styles */
+select[multiple] {
+    height: auto;
+    min-height: 100px;
+    padding: 10px;
+}
+.form-group .hint {
+    font-size: 0.8em;
+    color: var(--text-light);
+    margin-top: 5px;
+}
+
+/* Checkbox group */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    accent-color: var(--primary-green); /* Styles the checkbox */
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 0.95em;
+}
+
+.checkbox-group label a {
+    color: var(--primary-green);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.checkbox-group label a:hover {
+    text-decoration: underline;
+}
+
+
+/* Form Navigation Buttons */
+.form-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 15px;
+}
+
+.form-navigation button {
+    flex: 1;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform 0.1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.prev-step-btn {
+    background-color: var(--accent-light-gray);
+    color: var(--text-dark);
+}
+
+.prev-step-btn:hover {
+    background-color: var(--accent-light-gray-hover);
+    transform: translateY(-2px);
+}
+
+.next-step-btn {
+    background-color: var(--primary-green);
+    color: var(--bg-white);
+}
+
+.next-step-btn:hover {
+    background-color: var(--primary-green-dark);
+    transform: translateY(-2px);
+}
+
+.submit-btn {
+    background-color: var(--primary-green);
+    color: var(--bg-white);
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform 0.1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-btn:hover:not(:disabled) {
+    background-color: var(--primary-green-dark);
+    transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+    background-color: #a0d88c; /* Lighter green when disabled */
+    cursor: not-allowed;
+}
+
+/* Loading spinner for submit button */
+.loading-spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid var(--bg-white);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.submit-btn .btn-text {
+    transition: opacity var(--transition-speed);
+}
+.submit-btn.loading .btn-text {
+    opacity: 0;
+}
+.submit-btn.loading .loading-spinner {
+    display: block !important; /* Override inline style */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* --- Upload Area Styles --- */
+.upload-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.upload-btn {
+    background-color: var(--accent-light-gray);
+    color: var(--text-dark);
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color var(--transition-speed);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+.upload-btn:hover {
+    background-color: var(--accent-light-gray-hover);
+}
+
+.upload-btn i {
+    font-size: 1.2em;
+}
+
+.upload-area span {
+    font-size: 0.9em;
+    color: var(--text-light);
+    flex-grow: 1; /* Allow filename to take available space */
+    min-width: 100px; /* Ensure some space for filename even if button is large */
+}
+
+.placeholder-section {
+    background-color: rgba(103, 183, 73, 0.05); /* Light green background for optional section */
+    border: 1px dashed var(--primary-green);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.placeholder-section h4 {
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.placeholder-section p {
+    font-size: 0.9em;
+    color: var(--text-medium);
+    margin-bottom: 15px;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 992px) {
+    .registration-container {
+        flex-direction: column; /* Stack logo and form vertically */
+        width: 100%;
+        max-width: 600px; /* Max width for stacked layout */
+        min-height: auto;
+        margin: 20px auto;
+    }
+
+    .logo-section {
+        padding: 40px 20px;
+        border-radius: 15px 15px 0 0; /* Keep top corners rounded */
+    }
+
+    .shamba-direct-logo img {
+        max-width: 120px;
+        margin-bottom: 15px;
+    }
+
+    .logo-text h2 {
+        font-size: 1.8em;
+    }
+
+    .logo-text p {
+        font-size: 1em;
+        max-width: none;
+    }
+
+    .form-section {
+        padding: 30px 20px;
+        border-radius: 0 0 15px 15px; /* Keep bottom corners rounded */
+    }
+
+    .form-card h2 {
+        font-size: 1.8em;
+        margin-bottom: 5px;
+    }
+
+    .form-card .subtitle {
+        font-size: 0.95em;
+        margin-bottom: 25px;
+    }
+
+    .progress-bar-container {
+        width: 100%; /* Make progress bar full width on mobile */
+    }
+
+    .form-navigation {
+        flex-direction: column; /* Stack navigation buttons */
+    }
+
+    .form-navigation button {
+        width: 100%;
+        margin-bottom: 10px; /* Space between stacked buttons */
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding: 10px; /* Reduce overall padding */
+    }
+    .registration-container {
+        border-radius: 10px;
+        margin: 10px auto;
+    }
+    .logo-section {
+        padding: 30px 15px;
+        border-radius: 10px 10px 0 0;
+    }
+    .shamba-direct-logo img {
+        max-width: 100px;
+    }
+    .logo-text h2 {
+        font-size: 1.5em;
+    }
+    .logo-text p {
+        font-size: 0.9em;
+    }
+    .form-section {
+        padding: 25px 15px;
+        border-radius: 0 0 10px 10px;
+    }
+    .form-card h2 {
+        font-size: 1.6em;
+    }
+    .form-step h3 {
+        font-size: 1.4em;
+        margin-bottom: 20px;
+    }
+    .form-group input:not([type="checkbox"]),
+    .form-group select,
+    .form-group textarea {
+        padding: 10px 12px;
+        font-size: 0.95em;
+    }
+    .progress-step {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8em;
+    }
+    .progress-line {
+        width: calc(100% - 60px);
+        left: 30px;
+    }
+    .upload-btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+    .upload-area span {
+        font-size: 0.8em;
+        min-width: unset; /* Allow it to shrink more if needed */
+        text-align: right;
+    }
+}

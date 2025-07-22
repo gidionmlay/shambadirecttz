@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Shamba Direct - Farmer's Market</title>
+    <link rel="stylesheet" href="/pages/styles/wide.css" />
+    <link rel="stylesheet" href="/pages/styles/service.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <!-- Header -->
+   
+    <header class="shamba-navbar">
+      <div class="navbar-container">
+        <div class="logo-section">
+          <img src="/assets/images/SHAMBA-DIRECT-LOGO-OG-removebg-preview.png" alt="Shamba Direct Logo" class="logo-img">
+        </div>
+                              
+        <nav class="main-nav">
+          <a href="/pages/public/home.html">Home</a>
+          <a href="/pages/public/service.html">Service</a>
+          <a href="/pages/public/about.html">About</a>
+          <a href="/pages/public/contact.html">Reach Us</a>
+        </nav>
+            
+        <div class="icon-section">
+          <i class="ri-search-line"></i>
+          <i class="ri-sun-line" id="theme-toggle"></i>
+          <i class="ri-global-line"></i>
+          <i class="ri-shopping-cart-line"></i>
+          <i class="ri-user-line"></i>
+        </div>
+    
+    
+        <div class="auth-section">
+          <a href="/pages/public/login.html" class="login-btn">Log in</a>
+          <a href="/pages/public/registration.html" class="register-btn">Register</a>
+        </div>
+      </div>
+    </header>
+    <main class="main-content">
+      <section class="filter-section">
+        <h2>Filter Products</h2>
+        <form class="filter-form">
+          <div class="form-group">
+            <label for="product-category">Product Category</label>
+            <select id="product-category" name="product-category">
+              <option value="">All Products</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="price-range">Price Range (TZS)</label>
+            <div class="price-inputs">
+              <input type="number" id="price-min" name="price-min" value="0" min="0" />
+              <span>to</span>
+              <input type="number" id="price-max" name="price-max" value="100000" min="0" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="search-products">Search Products</label>
+            <div class="search-input">
+              <input type="text" id="search-products" name="search-products" placeholder="Search products..." />
+              <button type="submit" aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+        <div class="quick-filters">
+          <h3>Quick Filters:</h3>
+          <div class="filter-buttons">
+            <button class="filter-btn">Irrigation system</button>
+            <button class="filter-btn">Organic</button>
+            <button class="filter-btn">Equipment</button>
+            <button class="filter-btn">Tools</button>
+          </div>
+        </div>
+      </section>
+      <section class="products-grid">
+        <article class="product-card">
+          <div class="product-image">
+            <img src="/assets/images/generator 1 copy.png" alt="Premium Maize Seeds" />
+            <span class="product-badge best-seller">JPM Hardware</span>
+            <span class="product-category">Irrigation</span>
+          </div>
+          <div class="product-details">
+            <h3>Water Pump (Agricultural Pump)</h3>
+            <p>
+              High-performance water pump designed for agricultural use. Efficient and durable for all your irrigation needs.
+            </p>
+            <div class="product-meta">
+              <span class="product-price">150,000 TZS</span>
+              <span class="product-stock">15 in stock</span>
+            </div>
+            <a href="/pages/public/login.html"><button class="order-btn">Order Now</button><i class="fa-solid fa-cart-plus"></i></a>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image">
+            <img src="/assets/images/3d-render-rotavator-removebg-preview.png" alt="Organic NPK Fertilizer" />
+            <span class="product-badge organic">JPM Hardware</span>
+            <span class="product-category">Equipment</span>
+          </div>
+          <div class="product-details">
+            <h3>Power Tiller (Walking Tractor / Rotary Tiller)</h3>
+            <p>Powerful and versatile tiller for efficient soil preparation. Ideal for small to medium farms.</p>
+            <div class="product-meta">
+              <span class="product-price">450,000 TZS</span>
+              <span class="product-stock">10 in stock</span>
+            </div>
+            <a href="/pages/public/login.html"><button class="order-btn">Order Now</button></a>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image">
+            <img src="/assets/images/irrigation tool1.png" alt="Garden Hoe Tool Set" />
+            <span class="product-category">Irrigation</span>
+          </div>
+          <div class="product-details">
+            <h3>Drip Irrigation Kit</h3>
+            <p>Water-efficient irrigation system ideal for small to medium farms. Easy to install and maintain.</p>
+            <div class="product-meta">
+              <span class="product-price">75,000 TZS</span>
+              <span class="product-stock">15 in stock</span>
+            </div>
+            <a href="/pages/public/login.html"><button class="order-btn">Order Now</button></a>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image">
+            <img src="/assets/images/pump 1 copy.png" alt="Natural Pest Control Spray" />
+            
+            <span class="product-badge organic">JPM Hardware</span>
+            <span class="product-category">Irrigation</span>
+          </div>
+          <div class="product-details">
+            <h3>Knapsack Sprayer</h3>
+            <p>Efficient and portable sprayer for applying pesticides and fertilizers. Ideal for small to medium farms.</p>
+            <div class="product-meta">
+              <span class="product-price">28,000 TZS</span>
+              <span class="product-stock">45 in stock</span>
+            </div>
+            <a href="/pages/public/login.html"><button class="order-btn">Order Now</button></a>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image">
+            <img src="/assets/images/vijembe.png" alt="Drip Irrigation Kit" />
+            <span class="product-category">Tools</span>
+          </div>
+          <div class="product-details">
+            <h3>Shovels</h3>
+            <p>Durable and efficient shovels for various farming tasks. Ideal for small to medium farms.</p>
+            <div class="product-meta">
+              <span class="product-price">55,000 TZS</span>
+              <span class="product-stock">15 in stock</span>
+            </div>
+            <a href="/pages/public/login.html"><button class="order-btn">Order Now</button></a>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image">
+            <img src="/assets/images/gen_3-removebg-preview.png" alt="Tomato Seeds Pack" />
+            <span class="product-badge sale">Sale</span>
+            <span class="product-category">Seeds</span>
+          </div>
+          <div class="product-details">
+            <h3>Water Pump</h3>
+            <p>High-efficiency water pump suitable for irrigation and drainage. Durable and easy to use.</p>
+            <div class="product-meta">
+              <span class="product-price">12,000 TZS</span>
+              <span class="product-price original">13,800 TZS</span>
+              <span class="product-stock">10 in stock</span>
+            </div>
+            <a href="/pages/public/login.html"><button class="order-btn">Order Now</button></a>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image">
+            <img src="/assets/images/pump 2.png" alt="pump" />
+            <span class="product-category">Irrigation</span>
+          </div>
+          <div class="product-details">
+            <h3>Knapsack Sprayer (Manual Sprayer)</h3>
+            <p>
+              High-efficiency manual sprayer for applying pesticides and fertilizers. Ideal for small to medium farms.
+            </p>
+            <div class="product-meta">
+              <span class="product-price">52,000 TZS</span>
+              <span class="product-stock">60 in stock</span>
+            </div>
+            <a href="/pages/public/login.html"><button class="order-btn">Order Now</button></a>
+            
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image">
+            <img src="/assets/images/3d-render-rotavator-removebg-preview.png" alt="Premium Pruning Shears" />
+            <span class="product-badge best-seller">Best Seller</span>
+            <span class="product-badge sale">Sale</span>
+            <span class="product-category">Tools</span>
+          </div>
+          <div class="product-details">
+            <h3>Premium Pruning Shears</h3>
+            <p>Professional-grade pruning shears with sharp blades and comfortable grip for precise cutting.</p>
+            <div class="product-meta">
+              <span class="product-price">18,000 TZS</span>
+              <span class="product-price original">20,700 TZS</span>
+              <span class="product-stock">40 in stock</span>
+            </div>
+            <a href="/pages/public/login.html"><button class="order-btn">Order Now</button></a>
+          </div>
+        </article>
+      </section>
+      <nav class="pagination" aria-label="Pagination">
+        <button class="prev-btn" disabled>Previous</button>
+        <button class="page-btn active" aria-current="page">1</button>
+        <button class="page-btn">2</button>
+        <button class="next-btn">Next</button>
+      </nav>
+    </main>
+    <!-- WhatsApp Chat Button -->
+      <a href="https://wa.me/255750586178"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat on WhatsApp"
+>
+  <i class="bxr bx-message-circle bx-flip-horizontal bx-bounce "></i>
+</a>
+    <!-- Footer -->
+    <footer class="footer-section">
+    <div class="footer-container">
+
+        <div class="footer-col footer-col-brand">
+            <img src="/assets/images/SHAMBA-DIRECT-LOGO-OG-removebg-preview.png" alt="Shamba Direct Logo" class="footer-logo">
+            <p class="footer-tagline">Empowering Farmers. Connecting Inputs. Growing Together.</p>
+        </div>
+
+        <div class="footer-col footer-col-links">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#reach-us">Reach Us</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col footer-col-contact">
+            <h4 class="footer-heading">Contact & Support</h4>
+            <ul class="footer-contact-list">
+                <li>
+                    <i class="fas fa-phone-alt footer-icon"></i>
+                    <a href="tel:+255700123456">+255 752607104</a>
+                </li>
+                <li>
+                    <i class="fas fa-envelope footer-icon"></i>
+                    <a href="mailto:support@shambadirect.co.tz">huduma@shambadirect.co.tz</a>
+                </li>
+                <li>
+                    <i class="fab fa-whatsapp footer-icon"></i>
+                    <a href="https://wa.me/+255 750 586 178" target="_blank">Chat with us</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-col footer-col-access">
+            <h4 class="footer-heading">Access Channels</h4>
+            <div class="access-channels-grid">
+                <div class="access-channel-item">
+                    <i class="fas fa-globe footer-icon-large"></i>
+                    <span>Web Portal</span>
+                </div>
+                <div class="access-channel-item">
+                    <i class="fab fa-whatsapp footer-icon-large"></i>
+                    <span>WhatsApp Ordering</span>
+                </div>
+                <div class="access-channel-item">
+                    <i class="fas fa-mobile-alt footer-icon-large"></i>
+                    <span>USSD Access</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-col footer-col-social">
+            <h4 class="footer-heading">Follow Us</h4>
+            <div class="social-icons">
+                <a href="https://facebook.com/shambadirect" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f social-icon"></i>
+                </a>
+                <a href="https://instagram.com/shambadirect" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram social-icon"></i>
+                </a>
+                <a href="https://twitter.com/shambadirect" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter social-icon"></i>
+                </a>
+                <a href="https://linkedin.com/company/shambadirect" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in social-icon"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom-bar">
+        <p class="footer-copyright">&copy; 2025 Shamba Direct. All rights reserved.</p>
+        <div class="footer-legal-links">
+            <a href="#terms">Terms of Service</a>
+            <span class="separator">|</span>
+            <a href="#privacy">Privacy Policy</a>
+        </div>
+    </div>
+</footer>
+<div class="chatbot-container">
+        <button class="chatbot-toggle"><i class="bxr bx-help-circle bx-beat"></i> </button>
+        <div class="chatbot-window">
+            <div class="chatbot-header">Shamba Bot <span class="close-chat">✖</span></div>
+            <div class="chatbot-messages" id="chatMessages">
+                </div>
+            <form id="chatForm">
+                <input type="text" id="chatInput" placeholder="Andika ujumbe wako..." required />
+                <button type="submit">Tuma</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/pages/scripts/chatbot.js"></script>
+    <script src="/pages/scripts/theme.js"></script>
+  </body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shamba Direct - Farmer Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/pages/css/dashboard overview.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="/Image/SHAMBA-DIRECT-LOGO-OG-removebg-preview.png" alt="Shamba Direct Logo">
+            </div>
+            
+            <div class="nav-menu">
+                <a href="#" class="nav-item active">
+                    <i class="fas fa-home"></i>
+                    <span>Overview</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Order Input</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-list-alt"></i>
+                    <span>My Oders</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-credit-card"></i>
+                    <span>Credit</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-book"></i>
+                    <span>Learning Hub</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-headset"></i>
+                    <span>Support</span>
+                </a>
+            </div>
+            
+            <a href="#" class="logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Sign Out</span>
+            </a>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <h1 class="dashboard-title">Farmer Dashboard</h1>
+                
+                <div class="user-profile">
+                    <div class="notification">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    
+                    <div class="profile">
+                        <img src="/Image/isaa.jpg" alt="Profile">
+                        <span>Issa Hassani Issa</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Welcome Section -->
+            <div class="welcome-section">
+                <h2 class="welcome-title">Welcome back, Issa Hassani!</h2>
+                <p class="welcome-subtitle">Here's an overview of your farming activities</p>
+            </div>
+            
+            <!-- Stats Cards -->
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <div class="stat-icon icon-credit">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-label">Credit Balance</div>
+                        <div class="stat-value">TSh 15,000</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon icon-orders">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-label">Active Orders</div>
+                        <div class="stat-value">2</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon icon-delivery">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-label">Out for Delivery</div>
+                        <div class="stat-value">1</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon icon-payment">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-label">Next Payment Due</div>
+                        <div class="stat-value">Oct 15</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- Recent Orders -->
+                <div class="recent-orders">
+                    <div class="section-header">
+                        <h3 class="section-title">Recent Orders</h3>
+                        <a href="#" class="view-all">View All</a>
+                    </div>
+                    
+                    <div class="orders-container">
+                        <table class="orders-table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Date</th>
+                                    <th>Items</th>
+                                    <th>Status</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="order-id">ORD-7891</span></td>
+                                    <td>Oct 1, 2023</td>
+                                    <td>Maize Seeds (10kg), NPK Fertilizer</td>
+                                    <td><span class="status status-pending">Out for Delivery</span></td>
+                                    <td>TSh 48,500</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="order-id">ORD-7845</span></td>
+                                    <td>Sep 25, 2023</td>
+                                    <td>Pesticide, Sprayer</td>
+                                    <td><span class="status status-processing">Processing</span></td>
+                                    <td>TSh 35,200</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="order-id">ORD-7712</span></td>
+                                    <td>Sep 15, 2023</td>
+                                    <td>Tomato Seeds, Organic Fertilizer</td>
+                                    <td><span class="status status-delivered">Delivered</span></td>
+                                    <td>TSh 22,800</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="order-id">ORD-7692</span></td>
+                                    <td>Sep 8, 2023</td>
+                                    <td>Drip Irrigation Kit</td>
+                                    <td><span class="status status-delivered">Delivered</span></td>
+                                    <td>TSh 8,500</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="order-id">ORD-7651</span></td>
+                                    <td>Jan 27, 2025</td>
+                                    <td>Bean Seeds (5kg), DAP Fertilizer</td>
+                                    <td><span class="status status-delivered">Delivered</span></td>
+                                    <td>TSh 3,750</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="order-id">ORD-7609</span></td>
+                                    <td>Jan 15, 2025</td>
+                                    <td>Fungicide, Growth Booster</td>
+                                    
+                                    <td><span class="status status-delivered">Delivered</span></td>
+                                    <td>TSh 32,200</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Seasonal Farming Tips -->
+                <div class="seasonal-tips">
+                    <div class="tips-header">
+                        <div class="tips-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3 class="section-title">Seasonal Farming Tips</h3>
+                    </div>
+                    
+                    <div class="tips-content">
+                        <h4 class="tips-title">October Planting Guide</h4>
+                        <p class="tips-description">
+                            It's time to prepare your land for the short rains. Consider these high-yield crops for this season:
+                        </p>
+                        <ul class="tips-list">
+                            <li>Beans - Plant early in the month</li>
+                            <li>Maize - Select drought-resistant varieties</li>
+                            <li>Green vegetables - Kale and spinach perform well</li>
+                        </ul>
+                        <a href="#" class="read-more">
+                            Read more farming tips <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="tips-content">
+                        <h4 class="tips-title">Pest Management Tips</h4>
+                        <p class="tips-description">
+                            As the rainy season approaches, be prepared to manage these common pests:
+                        </p>
+                        <ul class="tips-list">
+                            <li>Fall armyworm - Monitor maize crops closely</li>
+                            <li>Aphids - Use natural repellents for vegetables</li>
+                            <li>Bean flies - Early treatment is essential</li>
+                        </ul>
+                        <a href="#" class="read-more">
+                            View pest control guide <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Shamba Direct</h3>
+                <p>Connecting farmers with quality agricultural inputs for sustainable farming.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+254 700 123 456</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>huduma@shambadirect.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Arusha, Tanzania</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            &copy; 2025 · Shamba Direct. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
